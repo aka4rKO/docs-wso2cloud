@@ -17,7 +17,7 @@ description: Definitions of the terms used across the Choreo Cloud documentation
 | **Deployment track** | A separate line of a component, such as one per branch or API version, that is built and deployed alongside the component's **default** track. Each deployment track has its own alert rules, and also runs the default track's rules. |
 | **Enterprise** | The paid plan for a service, on an annual contract. You buy it through AWS Marketplace or directly from Choreo Labs. |
 | **Enterprise sign-in** | Signing in to Choreo Cloud with your organization's own OpenID Connect identity provider instead of Google or GitHub. |
-| **Environment** | An isolated place where components run, such as Development or Production. Shared across services, except Platform Engineering. |
+| **Environment** | An isolated place where components run, such as Development or Production. Shared across services. |
 | **Group** | A set of users in an organization. Each group is granted a role, and its members get that role's permissions. Every organization has one built-in group per role, with the same name. |
 | **Notification channel** | A webhook or a list of email addresses that receives alerts from one environment. Each environment has a default channel. |
 | **Organization** | The top-level tenant boundary in Choreo Cloud. It holds users, service contacts, and the resources you create in every service. |
@@ -26,7 +26,7 @@ description: Definitions of the terms used across the Choreo Cloud documentation
 | **Private data plane (PDP)** | Runtime infrastructure dedicated to a single organization. It can run in Choreo Labs' cloud account, your cloud account, or your data center. |
 | **Private endpoint** | A host and port in your own network, such as a database, that workloads reach through private network access. |
 | **Private network access** | An outbound tunnel from one environment to your Tailscale network, so workloads in allowed projects can reach private endpoints. |
-| **Project** | A group of components that make up one application or domain. Shared across services, except Platform Engineering, so one project can hold components from several services. |
+| **Project** | A group of components that make up one application or domain. Shared across services, so one project can hold components from several services. |
 | **Role** | A set of permissions, granted to a group. Choreo Cloud has five built-in roles: Admin, Platform Engineer, Developer, Viewer, and API Publisher. They apply across the organization and in every service. |
 | **Service** | A part of the Choreo Cloud platform that covers the full lifecycle of one kind of work, including governance, such as Agent Management or API Management. Every service is part of the Choreo Cloud console and has its own documentation. |
 | **Service contact** | A person Choreo Labs notifies about general announcements, security, or billing for an organization. |

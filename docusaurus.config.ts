@@ -97,7 +97,7 @@ const config: Config = {
           items: [
             {
               label: 'What is Choreo Cloud?',
-              to: '/docs/get-started/what-is-wso2-cloud',
+              to: '/docs/get-started/what-is-choreo-cloud',
             },
           ],
         },
@@ -110,7 +110,7 @@ const config: Config = {
             },
             {
               label: 'Choreo Labs',
-              href: 'https://wso2.com',
+              href: 'https://choreolabs.com',
             },
           ],
         },

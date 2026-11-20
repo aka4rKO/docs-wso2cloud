@@ -39,7 +39,7 @@ Generate an auth key in the Tailscale admin console, as described in [Auth keys]
 | --- | --- | --- |
 | **Reusable** | On | The gateway runs two devices, and new devices replace them when the gateway restarts or updates. All of them join with the same key. |
 | **Ephemeral** | On | Gateway devices that stop are removed from your tailnet by themselves. |
-| **Tags** | Optional, such as `tag:wso2cloud` | Gateway devices get these tags, so your access policy can allow them by tag. |
+| **Tags** | Optional, such as `tag:choreocloud` | Gateway devices get these tags, so your access policy can allow them by tag. |
 | **Expiration** | Up to 90 days | Tailscale's limit. Plan to [rotate the key](#rotate-the-auth-key) before it expires. |
 
 Copy the key when Tailscale shows it. It's shown only once.
@@ -50,16 +50,16 @@ Running gateway devices stay connected after the key expires, but new devices ca
 
 ### Allow the gateway in your access policy
 
-If your tailnet's [access policy](https://tailscale.com/docs/features/access-control/grants) doesn't allow all traffic, add a rule that lets the gateway devices reach each private endpoint and port. For example, with the `tag:wso2cloud` tag on the auth key, this lets the gateway reach a database at `10.20.0.15` on port `5432`:
+If your tailnet's [access policy](https://tailscale.com/docs/features/access-control/grants) doesn't allow all traffic, add a rule that lets the gateway devices reach each private endpoint and port. For example, with the `tag:choreocloud` tag on the auth key, this lets the gateway reach a database at `10.20.0.15` on port `5432`:
 
 ```json
 {
   "tagOwners": {
-    "tag:wso2cloud": ["autogroup:admin"]
+    "tag:choreocloud": ["autogroup:admin"]
   },
   "grants": [
     {
-      "src": ["tag:wso2cloud"],
+      "src": ["tag:choreocloud"],
       "dst": ["10.20.0.15/32"],
       "ip": ["tcp:5432"]
     }
@@ -71,7 +71,7 @@ Allow only the addresses and ports of your endpoints, not whole networks. Use th
 
 ## Connect an environment
 
-1. Sign in to the [Choreo Cloud console](https://console.cloud.wso2.com).
+1. Sign in to the [Choreo Cloud console](https://console.cloud.choreolabs.com).
 2. In the top bar, select **Settings**, then under **Infrastructure**, select **Private Network**.
 3. Select the environment tab, **Development** or **Production**.
 4. Select **Set up private network**.
